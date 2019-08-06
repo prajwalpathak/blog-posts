@@ -51,20 +51,23 @@ class Posts extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>My Blog</h1>
-                <div className="posts-container">
+            <React.Fragment>
+                <header>
+                    <h1 id="header">My Blog</h1>
+                </header>
+                <main className="posts-container">
                     {
                         this.state.posts.map(post =>
                             <Post
                                 key={post.id}
                                 post={post}
                                 handleDelete={this.handleDeletePost}
-                                handleEdit={this.handleChange} />
+                                handleEdit={this.handleChange}
+                            />
                         )
                     }
-                </div>
-            </div>
+                </main>
+            </React.Fragment>
         );
     }
 }

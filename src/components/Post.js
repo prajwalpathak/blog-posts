@@ -19,18 +19,40 @@ class Post extends React.Component {
         const { handleDelete, handleEdit } = this.props;
         const { title, body } = this.state;
         const { id, userId } = this.props.post;
-        return <div>
+        return <React.Fragment>
             {
                 <div className="post-container">
-                    <textarea id="title" name="title" value={title} onChange={this.handleChange}></textarea>
-                    <textarea style={{ height: 100 }} name="body" value={body} onChange={this.handleChange}></textarea>
+                    <textarea
+                        id="title"
+                        name="title"
+                        value={title}
+                        placeholder="Title of post"
+                        onChange={this.handleChange}
+                    >
+                    </textarea>
+                    <textarea
+                        style={{ height: 100 }}
+                        name="body"
+                        value={body}
+                        placeholder="Body of post"
+                        onChange={this.handleChange}
+                    >
+                    </textarea>
                     <div className="button-container">
-                        <button onClick={() => handleDelete(id)}>Delete Post</button>
-                        <button onClick={() => handleEdit({ id, userId, title, body })}>Edit Post</button>
+                        <button
+                            onClick={() => handleEdit({ id, userId, title, body })}
+                        >
+                            Edit Post
+                        </button>
+                        <button
+                            onClick={() => handleDelete(id)}
+                        >
+                            Delete Post
+                        </button>
                     </div>
                 </div>
             }
-        </div>
+        </React.Fragment>
     }
 }
 

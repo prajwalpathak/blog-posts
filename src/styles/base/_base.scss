@@ -3,15 +3,21 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: $m-size;
+  background-color: $dark-grey;
+  color: white;
 }
 
 button {
   cursor: pointer;
   height: 40px;
-  width: 80px;
+  width: 100px;
   border-radius: 4px;
+  outline: none;
+  background-color: $purple;
+  color: white;
+  border: none;
 }
 
 button:disabled {
@@ -25,8 +31,11 @@ textarea {
   outline: none;
   width: 600px;
   text-align: justify;
+  background-color: $light-grey;
+  color: white;
 }
 
-h1 {
+#header {
   text-align: center;
+  font-size: $xl-size;
 }

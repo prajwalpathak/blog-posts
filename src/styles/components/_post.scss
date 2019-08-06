@@ -9,8 +9,16 @@
 .button-container {
   display: flex;
   flex-direction: row;
+  margin: 8px;
+  justify-content: space-between;
 }
 
 #title {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+  .post-container {
+    margin: auto;
+  }
 }
