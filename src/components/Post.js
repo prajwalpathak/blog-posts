@@ -3,7 +3,7 @@ import React from 'react';
 class Post extends React.Component {
     constructor(props) {
         super(props);
-        const {title, body} = props.post;
+        const { title, body } = props.post;
         this.state = {
             title,
             body
@@ -11,21 +11,23 @@ class Post extends React.Component {
     }
 
     handleChange = event => {
-        const {name, value} = event.target;
-        this.setState({[name]: value});
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
     };
 
     render() {
-        const {handleDelete, handleEdit} = this.props;
-        const {title, body} = this.state;
-        const {id, userId} = this.props.post;
+        const { handleDelete, handleEdit } = this.props;
+        const { title, body } = this.state;
+        const { id, userId } = this.props.post;
         return <div>
             {
-                <div>
-                    <input name="title" value={title} onChange={this.handleChange}/>
-                    <input name="body" value={body} onChange={this.handleChange}/>
-                    <button onClick={() => handleDelete(id)}>DELETE</button>
-                    <button onClick={() => handleEdit({id, userId, title, body})}>EDIT</button>
+                <div className="post-container">
+                    <textarea id="title" name="title" value={title} onChange={this.handleChange}></textarea>
+                    <textarea style={{ height: 100 }} name="body" value={body} onChange={this.handleChange}></textarea>
+                    <div className="button-container">
+                        <button onClick={() => handleDelete(id)}>Delete Post</button>
+                        <button onClick={() => handleEdit({ id, userId, title, body })}>Edit Post</button>
+                    </div>
                 </div>
             }
         </div>
