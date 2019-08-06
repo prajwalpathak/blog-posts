@@ -30,39 +30,38 @@ class Posts extends React.Component {
     }
 
     handleChange = (newPost) => {
-        const { id, title, userId, body } = newPost;
+        const {id, title, userId, body} = newPost;
 
         axios.patch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-            title,
-            body,
+            title, 
+            body, 
             userId
         }).then(res => {
             this.setState(prevState => {
                 const idx = prevState.posts.findIndex(post => post.id === id);
-                const updatedPost = { ...prevState.posts[idx], title, body };
+                const updatedPost = {...prevState.posts[idx], title, body};
                 const posts = [...prevState.posts.slice(0, idx), updatedPost, ...prevState.posts.slice(idx + 1)]
                 return {
-                    posts
+                    posts 
                 }
             })
         })
-            .catch(err => console.log(err))
+        .catch(err => console.log(err))
     }
 
     render() {
         return (
             <div>
                 <h1>My Blog</h1>
-                <div className="posts-container"> {
-                    this.state.posts.map(post =>
-                        <Post
-                            key={post.id}
+                {
+                    this.state.posts.map(post => 
+                        <Post 
+                            key={post.id} 
                             post={post}
                             handleDelete={this.handleDeletePost}
-                            handleEdit={this.handleChange} />
+                            handleEdit={this.handleChange}/>
                     )
                 }
-                </div>
             </div>
         );
     }
