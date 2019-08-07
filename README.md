@@ -8,9 +8,9 @@
 
 <ol>
 <li>Use 'git clone' or download the zip.</li>
-<li>If you've downloaded the zip extract it.</li>
+<li>If you've downloaded the zip, extract it.</li>
 <li>'cd' into the project directory.</li>
-<li>Run 'yarn install'.</li>
-<li>Run 'yarn run dev-server'</li>
-<li>A browser window will automatically open & in case if it didn't open your favourite browser and go to : http://localhost:8080.</li>
+<li>Run 'yarn install' in terminal.</li>
+<li>Run 'yarn run dev-server' in terminal</li>
+<li>A browser window will automatically open & in case if it didn't, open your favourite browser and go to : http://localhost:8080.</li>
 </ol>
