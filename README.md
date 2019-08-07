@@ -2,7 +2,7 @@
 
 <h2>What i've implemented?</h2>
 
-<p>A component which fetches all the posts using GET call to an API and displays them. User can delete or edit specific post. To edit post, click on the title or body of specific post and click on 'Edit' button.</p>
+<p>A component which fetches all the posts using GET call to an API and displays them. User can delete or edit specific post. To edit post, click on the title or body of specific post, make desired changes and click on 'Edit' button.</p>
 
 <h2>How to run this on your machine?</h2>
 
